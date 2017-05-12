@@ -30,42 +30,44 @@ Order.prototype.orderPrice = function() {
   this.orderPrice += newPizza.price
 };
 
-Pizza.prototype.newPizza = function() {
-  var newPizza = new Pizza (size, sauce, cheese, toppings, 0)
-};
-
-Pizza.prototype.pizzaPrice = function() {
-  this.price = size += sauce += cheese += toppings
+Pizza.prototype.pizzaPrice = function(price) {
+  var price = sizePrice + cheesePrice + toppingsPrice
 };
 
 //user interface////////////
 
 $(function(){
-  // make objects newOrder & newPizza
-  var newOrder = newOrder.newOrder();
-  var newPizza = newPizza.newPizza();
 
-  $("form#addPizza").submit(function(event) {
+  $("form#addPizza").submit(function(event) { debugger;
     event.preventDefault();
 
     //grab inputs from form
     var size = $("#sizeSelection").val();
 
-    var sauce = $("input:radio[sauce=sauce]:checked").val();
+    var sizePrice = parseInt(size);
 
-    var crust = $("input:radio[crust=crust]:checked").val();
+    var sauce = $("#sauceSelection").val();
+
+    var crust = $("#crustSelection").val();
 
     var cheese = []; $("input:checkbox[name=cheese]:checked").each(function() {
       var selectedCheese = $(this).val();
       cheese.push(selectedCheese);
     });
 
+    var cheesePrice = parseInt(cheese.length);
+
     var toppings = []; $("input:checkbox[name=toppings]:checked").each(function() {
       var selectedTopping = $(this).val();
       toppings.push(selectedTopping);
     });
 
-    newPizza = (size, sauce, crust, cheese, toppings);
+    var toppingsPrice = parseInt(toppings.length);
 
+    var newPizza = new Pizza(size, sauce, crust, cheese, toppings, price);
+
+    var price = newPizza.pizzaPrice(sizePrice, cheesePrice, toppingsPrice);
+
+    $("ul").append("<li>" + "Size: " + size + " inches" + "<br>" + "Crust: " + crust + "<br>" + "Sauce: " + sauce + "<br>" + "Cheese: " + cheese + "<br>" + "Toppings: " + toppings + "<br>" + "Price: $" + price + "<br>" + "<br>" + "</li>");
   });
 });
