@@ -1,0 +1,47 @@
+
+body {
+  font-family: 'Teko', sans-serif;
+  background-image: url(http://4.bp.blogspot.com/--wv-qwHOMMg/Ul6xounmpMI/AAAAAAAAZpQ/_eyr7GpZ7pQ/s1600/Cities3.jpg);
+  background-attachment: fixed;
+  color: #72cedb;
+}
+
+h3 {
+  color: #ee91ca;
+  text-shadow: 10px 10px #1d212c;
+}
+
+h1 {
+  float: right;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 60px;
+}
+
+li {
+  color: #ee91ca;
+  font-size: 30px;
+  text-shadow: 5px 5px #1d212c;
+  background-color: #454152;
+  border-radius: 20px;
+}
+
+#addPizza {
+  margin-top: 200px;
+}
+
+.well {
+  background-color: #1d212c;
+}
+
+#steve {
+  width: 400px;
+  height: auto;
+}
+
+.steve {
+  float: right;
+}
+
+.order-out {
+  display: none;
+}
