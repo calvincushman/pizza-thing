@@ -54,5 +54,10 @@ $(function(){
 
     var newOrder = new Order
     $("ul").append("<li>" + "Size: " + size + " inches" + "<br>" + "Crust: " + crust + "<br>" + "Sauce: " + sauce + "<br>" + "Cheese: " + cheese + "<br>" + "Toppings: " + toppings + "<br>" + "Price: $" + price + "<br>" + "<br>" + "</li>");
+
+    $("#place-order").click(function() {
+      $(".orderPage").hide();
+      $(".order-out").show();
+    })
   });
 });
