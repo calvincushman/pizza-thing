@@ -4,102 +4,114 @@
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Syncopate|Teko" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <title>Pizza Thing</title>
   </head>
   <body>
     <div class="container">
       <div class="header">
-
+        <h1>PIZZA THING</h1>
       </div>
       <!-- //end of header -->
-      <form id="addPizza">
-        <div class="row">
-        <div class="col-sm-4" id="everything-else">
-          <h3>Choose a size</h3>
-          <select class="form-control" id="sizeSelection" required>
-            <option value="3">Tiny</option>
-            <option value="5">Really small</option>
-            <option value="8">Not so small</option>
-            <option value="15">Pretty big</option>
-            <option value="75">Huge</option>
-          </select>
-          <h3>Choose a crust</h3>
-          <select class="form-control" id="crustSelection" required>
-            <option value="Crispy">Crispy</option>
-            <option value="Deep-Dish">Deep-Dish</option>
-            <option value="Tortilla">Tortilla</option>
-            <option value="Spanikopita">Spanikopita</option>
-          </select>
-          <h3>Choose a sauce!</h3>
-          <select class="form-control" id="sauceSelection" required>
-            <option value="Marmalade">Marmalade</option>
-            <option value="Red">Red Sauce</option>
-            <option value="Barbecue">Barbecue Sauce</option>
-            <option value="Salsa">Salsa</option>
-            <option value="No">No sauce</option>
-          </select>
-          <h3>Cheese</h3>
-          <input type="checkbox" name="cheese" value="mozzarella">Mozzarella
-          <br>
-          <input type="checkbox" name="cheese" value="blue-cheese">Blue Cheese
-          <br>
-          <input type="checkbox" name="cheese" value="swiss">Swiss Cheese
-          <br>
-          <input type="checkbox" name="cheese" value="headcheese">Queso de Puerco
-          <br>
-        </div>
-        <!-- //end of erryting else column -->
-        <div class="col-sm-7" id="toppingsColumn">
-          <h3 id=topping-header>Choose your toppings</h3>
-          <div class="container">
-            <div class="row">
-              <div class="col-xs-6" id="toppings1">
-                <input type="checkbox" name="toppings" value="turkey">Turkey
-                <br>
-                <input type="checkbox" name="toppings" value="pineapple">Pineapple
-                <br>
-                <input type="checkbox" name="toppings" value="peas">Snow Peas
-                <br>
-                <input type="checkbox" name="toppings" value="tofu">Tofu
-                <br>
-                <input type="checkbox" name="toppings" value="sausage">Sausage
-                <br>
-                <input type="checkbox" name="toppings" value="habanero">Habanero
-              </div>
-              <div class="col-xs-6" id="toppings2">
-                <input type="checkbox" name="toppings" value="pepperoni">Pepperoni
-                <br>
-                <input type="checkbox" name="toppings" value="corn">Corn
-                <br>
-                <input type="checkbox" name="toppings" value="jalapeno">Jalapeno
-                <br>
-                <input type="checkbox" name="toppings" value="lucky-charms">Lucky Charms
-                <br>
-                <input type="checkbox" name="toppings" value="ramen">Top Ramen
-                <br>
-                <input type="checkbox" name="toppings" value="pizza-bites">Totinos Pizza Bites
-                <br>
+      <div class="order-out">
+        <h1>YOUR ORDER IS ON IT'S WAY</h1>
+        <img src="img/orderout.gif" alt="DJ pizza cat">
+      </div>
+      <div class="orderPage">
+        <form id="addPizza">
+          <div class="row">
+          <div class="col-sm-4" id="everything-else">
+            <h3>Choose a size</h3>
+            <select class="form-control" id="sizeSelection" required>
+              <option value="3">Tiny</option>
+              <option value="5">Really small</option>
+              <option value="8">Not so small</option>
+              <option value="15">Pretty big</option>
+              <option value="75">Huge</option>
+            </select>
+            <h3>Choose a crust</h3>
+            <select class="form-control" id="crustSelection" required>
+              <option value="Crispy">Crispy</option>
+              <option value="Deep-Dish">Deep-Dish</option>
+              <option value="Tortilla">Tortilla</option>
+              <option value="Spanikopita">Spanikopita</option>
+            </select>
+            <h3>Choose a sauce!</h3>
+            <select class="form-control" id="sauceSelection" required>
+              <option value="Marmalade">Marmalade</option>
+              <option value="Red">Red Sauce</option>
+              <option value="Barbecue">Barbecue Sauce</option>
+              <option value="Salsa">Salsa</option>
+              <option value="No">No sauce</option>
+            </select>
+            <h3>Cheese</h3>
+            <div class="well">
+              <input type="checkbox" name="cheese" value="mozzarella">Mozzarella
+              <br>
+              <input type="checkbox" name="cheese" value="blue-cheese">Blue Cheese
+              <br>
+              <input type="checkbox" name="cheese" value="swiss">Swiss Cheese
+              <br>
+              <input type="checkbox" name="cheese" value="headcheese">Queso de Puerco
+              <br>
+            </div>
+          </div>
+          <!-- //end of erryting else column -->
+          <div class="col-sm-7" id="toppingsColumn">
+            <h3 id=topping-header>Choose your toppings</h3>
+            <div class="container">
+              <div class="well">
+                <div class="row">
+                  <div class="col-xs-6" id="toppings1">
+                    <input type="checkbox" name="toppings" value="turkey">Turkey
+                    <br>
+                    <input type="checkbox" name="toppings" value="pineapple">Pineapple
+                    <br>
+                    <input type="checkbox" name="toppings" value="peas">Snow Peas
+                    <br>
+                    <input type="checkbox" name="toppings" value="tofu">Tofu
+                    <br>
+                    <input type="checkbox" name="toppings" value="sausage">Sausage
+                    <br>
+                    <input type="checkbox" name="toppings" value="habanero">Habanero
+                  </div>
+                  <div class="col-xs-6" id="toppings2">
+                    <input type="checkbox" name="toppings" value="pepperoni">Pepperoni
+                    <br>
+                    <input type="checkbox" name="toppings" value="corn">Corn
+                    <br>
+                    <input type="checkbox" name="toppings" value="jalapeno">Jalapeno
+                    <br>
+                    <input type="checkbox" name="toppings" value="lucky-charms">Lucky Charms
+                    <br>
+                    <input type="checkbox" name="toppings" value="ramen">Top Ramen
+                    <br>
+                    <input type="checkbox" name="toppings" value="pizza-bites">Totinos Pizza Bites
+                    <br>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
             <!-- //end of toppings container -->
         </div>
         <!-- //end of toppings column -->
-      </div>
-        <!-- //end of row -->
         <div class="row">
           <div class="col-md-6">
-            <div class="order-button">
+            <div class="add-button">
             <button type="submit" id="add-pizza" class="btn btn-danger">add pizza</button>
             </div>
           </div>
+          <div class="col-md-2">
+            <div class="order-button">
+            <button type="submit" id="place-order" class="btn btn-danger">place your order</button>
+            </div>
+          </div>
         </div>
-        <!-- //end of button column -->
-        <!-- //end of row -->
-      </form>
+      </div>
       <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-3">
         <div id="order-output">
           <h2>Your Pizzas</h2>
           <ul id="pizzasToOrder">
@@ -107,6 +119,9 @@
           <h2>Order Total</h2>
           <h3 id="orderTotal"></h3>
         </div>
+      </div>
+      <div class="col-md-6 steve">
+        <img id="steve" src="img/pizzasteeve.png" alt="Pizza Steve">
       </div>
     </div>
     </div>
